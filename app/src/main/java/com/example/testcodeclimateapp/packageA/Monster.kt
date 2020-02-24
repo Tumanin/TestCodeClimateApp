@@ -5,7 +5,7 @@ import android.util.Log
 /**
  * Created by ATumanin on 24.02.2020.
  */
-class Monster(val leftEye: Boolean,
+open class Monster(val leftEye: Boolean,
               val rightEye: Boolean,
               val leftEar: Boolean,
               val rightEar: Boolean,
@@ -30,7 +30,8 @@ class Monster(val leftEye: Boolean,
     Tiger,
     Shark,
     Camel,
-    Eagle {
+    Eagle,
+    Rna() {
 
     fun scaryPeople() {
         Log.d("Monster", "R-r-r-r-r!!!")

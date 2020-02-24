@@ -13,6 +13,7 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
+import com.example.testcodeclimateapp.packageA.Beast
 import com.example.testcodeclimateapp.packageA.Monster
 
 class MainActivity : AppCompatActivity() {
@@ -44,7 +45,25 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-        Monster().scaryPeople()
+        Monster(true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            10,
+            10).scaryPeople()
+
+        Beast().killEverything()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
