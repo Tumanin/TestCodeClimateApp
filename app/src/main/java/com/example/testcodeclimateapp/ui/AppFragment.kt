@@ -43,6 +43,7 @@ open class AppFragment : Fragment(){
         } else {
             newInt = 4
         }
+        //TODO: test todo
         when (newInt) {
             0 -> return 5
             1 -> return 6
