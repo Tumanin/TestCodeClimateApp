@@ -9,8 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.testcodeclimateapp.R
+import com.example.testcodeclimateapp.ui.AppFragment
 
-class GalleryFragment : Fragment() {
+class GalleryFragment : AppFragment() {
 
     private lateinit var galleryViewModel: GalleryViewModel
 
