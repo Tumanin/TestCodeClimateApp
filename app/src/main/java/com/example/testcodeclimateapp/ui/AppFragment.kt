@@ -1,5 +1,6 @@
 package com.example.testcodeclimateapp.ui
 
+import android.os.Bundle
 import androidx.fragment.app.Fragment
 
 /**
@@ -11,6 +12,11 @@ open class AppFragment : Fragment(){
     var anotherCOUNT: Int? = null
     var name = "name"
     var lastname: String? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        letCount()
+    }
 
     fun letCount(): Int {
         var newInt = 0
