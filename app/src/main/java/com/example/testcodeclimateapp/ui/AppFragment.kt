@@ -24,9 +24,21 @@ open class AppFragment : Fragment(){
             newInt = 1
             if(lastname?.equals("lastname") == true) {
                 newInt = 2
-            }
-            if(lastname?.equals("name") == true) {
+                if(name.length < count){
+                    newInt = 1
+                    if(count.plus(anotherCOUNT ?: 0) < name.length.plus(lastname?.length ?: 0)) {
+                        newInt = 0
+                    } else {
+                        newInt++
+                    }
+                } else {
+                    newInt++
+                }
+            }else if(lastname?.equals("name") == true) {
                 newInt = 3
+                if(count - newInt == 2) {
+                    newInt++
+                }
             }
         } else {
             newInt = 4
