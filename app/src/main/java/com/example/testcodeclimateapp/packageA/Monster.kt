@@ -1,6 +1,8 @@
 package com.example.testcodeclimateapp.packageA
 
 import android.util.Log
+import androidx.annotation.StringRes
+import com.example.testcodeclimateapp.packageB.CoronaVirus
 
 /**
  * Created by ATumanin on 24.02.2020.
@@ -21,7 +23,8 @@ open class Monster(val leftEye: Boolean,
               val claws: Boolean,
               val trunk: Boolean,
               val aggressiveness: Int,
-              val health: Int) : TRex,
+              val health: Int
+) : TRex,
     Mammut,
     KomodoDragon,
     Crocodile,
@@ -33,7 +36,27 @@ open class Monster(val leftEye: Boolean,
     Eagle,
     Rna() {
 
+    var coronaVirus: CoronaVirus? = null
+
     fun scaryPeople() {
         Log.d("Monster", "R-r-r-r-r!!!")
+    }
+
+    fun getEatenPeople(): List<String>? {
+        return null
+    }
+
+    fun doYouHaveAnyTeeth(): Boolean {
+        return if (leftFang || rightFang) true else false
+    }
+
+    fun doEvolution() {
+        var newRna = getRandomMutation()
+        depend()
+    }
+
+    fun depend() {
+        coronaVirus = CoronaVirus()
+        coronaVirus?.monster = this
     }
 }

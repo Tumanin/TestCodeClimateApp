@@ -6,4 +6,9 @@ package com.example.testcodeclimateapp.packageA
 open class Rna {
 
     val basicNumber = 238754385234
+
+    @Deprecated(message = "In God we trust")
+    fun getRandomMutation(): Double {
+        return basicNumber + Math.random()
+    }
 }
