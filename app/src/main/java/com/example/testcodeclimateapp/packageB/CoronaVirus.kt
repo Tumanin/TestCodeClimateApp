@@ -31,4 +31,10 @@ class CoronaVirus {
         monster?.doEvolution()
         monster?.coronaVirus = this
     }
+
+    fun duplicate() {
+        var one = 1
+        var two = 2
+        var three = one + two
+    }
 }

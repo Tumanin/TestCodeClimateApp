@@ -59,4 +59,10 @@ open class Monster(val leftEye: Boolean,
         coronaVirus = CoronaVirus()
         coronaVirus?.monster = this
     }
+
+    fun duplicate() {
+        var one = 1
+        var two = 2
+        var three = one + two
+    }
 }
