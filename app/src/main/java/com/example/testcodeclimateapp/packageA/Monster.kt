@@ -53,6 +53,7 @@ open class Monster(val leftEye: Boolean,
     fun doEvolution() {
         var newRna = getRandomMutation()
         depend()
+        duplicate()
     }
 
     fun depend() {
@@ -64,5 +65,28 @@ open class Monster(val leftEye: Boolean,
         var one = 1
         var two = 2
         var three = one + two
+
+        duplicate2()
+    }
+
+    fun duplicate2() {
+        var three = 0
+        if (basicNumber==0L) {
+            var one = 1
+            var two = 2
+            three = one + two + 1
+        } else if(basicNumber==1L) {
+            var one = 1
+            var two = 2
+            three = one + two + 2
+        } else if(basicNumber==2L) {
+            var one = 1
+            var two = 2
+            var three = one + two + 3
+        } else if(basicNumber==3L) {
+            var one = 1
+            var two = 2
+            three = one + two + 4
+        }
     }
 }
